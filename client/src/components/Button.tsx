@@ -1,16 +1,16 @@
 import "../style/Button.scss"
 
-type Props = {
-    Content: string,
-    Color: "white" | "black",
-    Type: "button" | "submit" | "reset",
-    HandleClick: () => void
+type ButtonProps = {
+    content: string,
+    color: "white" | "black",
+    type: "button" | "submit" | "reset",
+    handleClick: () => void
 }
 
 //  Button
-const Button = ({Content, Color, Type, HandleClick}: Props) => {
+const Button = ({content, color, type, handleClick}: ButtonProps) => {
     return (
-        <button type={Type} className={`${Color}_btn btn`} onClick={HandleClick}>{ Content }</button>
+        <button type={type} className={`${color}_btn btn`} onClick={handleClick}>{ content }</button>
     )
 }
 

@@ -4,26 +4,26 @@ import Button from "../components/Button"
 const args: Meta<typeof Button> = {
     title: "Components/Button",
     component: Button,
-    argTypes: { HandleClick: { action: "click" } }   
+    argTypes: { handleClick: { action: "click" } }   
 }
 
 export default args
 
 type Story = StoryObj<typeof Button>
 
-export const WhiteButton: Story = {
+export const White: Story = {
     args: {
-        Color: "white",
-        Content: "Button",
-        Type: "button"
+        color: "white",
+        content: "Button",
+        type: "button"
     }
 }
 
-export const BlackButton: Story = {
+export const Black: Story = {
     args: {
-        Color: "black",
-        Content: "Button",
-        Type: "button"
+        color: "black",
+        content: "Button",
+        type: "button"
     }
 }
 
