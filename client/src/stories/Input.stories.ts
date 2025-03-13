@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import Input from "../components/Input"
+import TextInput from "../components/TextInput"
 
-const args: Meta<typeof Input> = {
+const args: Meta<typeof TextInput> = {
     title: "Components/Input",
-    component: Input,
+    component: TextInput,
 }
 
 export default args
 
-type Story = StoryObj<typeof Input>
+type Story = StoryObj<typeof TextInput>
 
 export const Default: Story = {
     args: {
-        Placeholder: "Your text here",
-        Required: true
+        placeholder: "Your text here",
+        required: true
     }
 }
