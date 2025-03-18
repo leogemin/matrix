@@ -1,0 +1,16 @@
+.booking_widget_wrapper {
+    background-image: url("../assets/widget_background.jpeg");
+    background-size: cover;
+
+    padding: 5em 12.5em;
+}
+
+.booking_widget {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    padding: 1.5em 2em;
+    border-radius: .5em;
+}
