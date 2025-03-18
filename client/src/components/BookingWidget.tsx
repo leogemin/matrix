@@ -7,7 +7,7 @@ const BookingWidget = () => {
             <div className="booking_widget">
                 <h2 className="booking_widget__title">Reserve a Vehicle</h2>
                 <div className="booking_widget__input_wrapper">
-                    <span>Pick-up & Return Location (ZIP, City or Airport)*</span>
+                    <h4 className="booking_widget__input_wrapper__label">Pick-up & Return Location (ZIP, City or Airport)*</h4>
                     <TextInput placeholder="Provide a Location" required={true}/>
                 </div>
             </div>
