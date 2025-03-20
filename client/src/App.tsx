@@ -1,8 +1,15 @@
+import { Outlet } from "react-router"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
 import "./style/global.scss"
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
   )
 }
 
