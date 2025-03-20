@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+    border: 1px solid #d9d9d9;
+    border-radius: .5em;
+    background-color: white;
+
+    &__icon {
+        aspect-ratio: 4/4;
+        width: 2.5em;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__desc {
+        text-align: center;
+        line-height: 140%;
+    }
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 2em;
+}
+
+@media (min-width: 850px) {
+    .highlights {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 3.75em 5em;
+    }
+}
