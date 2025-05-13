@@ -21,10 +21,10 @@ const BookingWidget = () => {
         {e.target.value.length > 10 ? null : setReturnDate(e.target.value)}
     }
     const handlePickupTimeInput = (e: any) => {
-        setPickupTime(e.target.value)
+        {e.target.value.length > 8 ? null : setPickupTime(e.target.value)}
     }
     const handleReturnTimeInput = (e: any) => {
-        setReturnTime(e.target.value)
+        {e.target.value.length > 8 ? null : setReturnTime(e.target.value)}
     }
     
     return (
