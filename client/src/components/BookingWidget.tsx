@@ -15,10 +15,16 @@ const BookingWidget = () => {
     }
 
     const handlePickupDateInput = (e: any) => {
-        {e.target.value.length > 10 ? null : setPickupDate(e.target.value)}
+        const value = e.target.value
+        if (value.length <= 10 && /^\d{0,2}\/?\d{0,2}\/?\d{0,4}$/.test(value)) {
+            setPickupDate(value)
+        } 
     }
     const handleReturnDateInput = (e: any) => {
-        {e.target.value.length > 10 ? null : setReturnDate(e.target.value)}
+        const value = e.target.value
+        if (value.length <= 10 && /^\d{0,2}\/?\d{0,2}\/?\d{0,4}$/.test(value)) {
+            setReturnDate(value)
+        }
     }
     const handlePickupTimeInput = (e: any) => {
         {e.target.value.length > 8 ? null : setPickupTime(e.target.value)}
@@ -42,19 +48,19 @@ const BookingWidget = () => {
 
                     <div className="booking_widget__footer__mobile">
                         <div className="booking_widget__footer__mobile__cell">
-                            <label htmlFor="">Pick-up</label>
+                            <label>Pick-up</label>
                             <TextInput placeholder="DD/MM/YYYY" onChange={handlePickupDateInput} value={pickupDate} />
                         </div>
                         <div className="booking_widget__footer__mobile__cell">
-                            <label htmlFor="">Pick-up Time</label>
+                            <label>Pick-up Time</label>
                             <TextInput placeholder="00:00 AM" onChange={handlePickupTimeInput} value={pickupTime}/>
                         </div>
                         <div className="booking_widget__footer__mobile__cell">
-                            <label htmlFor="">Return</label>
+                            <label>Return</label>
                             <TextInput placeholder="DD/MM/YYYY" onChange={handleReturnDateInput} value={returnDate} />
                         </div>
                         <div className="booking_widget__footer__mobile__cell">
-                            <label htmlFor="">Return Time</label>
+                            <label>Return Time</label>
                             <TextInput placeholder="00:00 AM" onChange={handleReturnTimeInput} value={returnTime}/>
                         </div>
                         <div className="booking_widget__footer__mobile__btncell">
@@ -68,11 +74,11 @@ const BookingWidget = () => {
                             <h2 className="booking_widget__footer__desktop__cell__title">RETURN</h2>
                             <div className="booking_widget__footer__desktop__cell__input_wrapper">
                                 <div>
-                                    <label htmlFor="" className="booking_widget__footer__desktop__cell__input_wrapper__label">Date</label>
+                                    <label className="booking_widget__footer__desktop__cell__input_wrapper__label">Date</label>
                                     <TextInput placeholder="DD/MM/YYYY" onChange={handleReturnDateInput} value={returnDate} />
                                 </div>
                                 <div>
-                                    <label htmlFor="" className="booking_widget__footer__desktop__cell__input_wrapper__label">Time</label>
+                                    <label className="booking_widget__footer__desktop__cell__input_wrapper__label">Time</label>
                                     <TextInput placeholder="00:00 AM" onChange={handleReturnTimeInput} value={returnTime}/>
                                 </div>
                             </div>
@@ -81,11 +87,11 @@ const BookingWidget = () => {
                             <h2 className="booking_widget__footer__desktop__cell__title">PICK-UP</h2>
                             <div className="booking_widget__footer__desktop__cell__input_wrapper">
                                 <div>
-                                    <label htmlFor="" className="booking_widget__footer__desktop__cell__input_wrapper__label">Date</label>
+                                    <label className="booking_widget__footer__desktop__cell__input_wrapper__label">Date</label>
                                     <TextInput placeholder="DD/MM/YYYY" onChange={handlePickupDateInput} value={pickupDate} maxLength={10}/>
                                 </div>
                                 <div>
-                                    <label htmlFor="" className="booking_widget__footer__desktop__cell__input_wrapper__label">Time</label>
+                                    <label className="booking_widget__footer__desktop__cell__input_wrapper__label">Time</label>
                                     <TextInput placeholder="00:00 AM" onChange={handlePickupTimeInput} value={pickupTime}/>
                                 </div>
                             </div>
