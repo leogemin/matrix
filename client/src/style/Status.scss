@@ -1,0 +1,21 @@
+.status {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  background-color: white;
+  height: 100px;
+
+  &__card {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+
+    &__title {
+      font-size: .75rem;
+    }
+  }
+}
