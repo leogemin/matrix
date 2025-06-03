@@ -9,28 +9,32 @@ const BookingWidget = () => {
     const [pickupTime, setPickupTime] = useState("")
     const [returnDate, setReturnDate] = useState("")
     const [returnTime, setReturnTime] = useState("")
-    
+
+    const dateRegex = /^\d{0,2}\/?\d{0,2}\/?\d{0,4}$/
+    const DATE_MAX_LENGTH = 10
+    const TIME_MAX_LENGTH = 8
+
     const handleLocationInput = (e: any) => {
         setLocation(e.target.value)
     }
 
     const handlePickupDateInput = (e: any) => {
         const value = e.target.value
-        if (value.length <= 10 && /^\d{0,2}\/?\d{0,2}\/?\d{0,4}$/.test(value)) {
+        if (value.length <= DATE_MAX_LENGTH && dateRegex.test(value)) {
             setPickupDate(value)
         } 
     }
     const handleReturnDateInput = (e: any) => {
         const value = e.target.value
-        if (value.length <= 10 && /^\d{0,2}\/?\d{0,2}\/?\d{0,4}$/.test(value)) {
+        if (value.length <= DATE_MAX_LENGTH && dateRegex.test(value)) {
             setReturnDate(value)
         }
     }
     const handlePickupTimeInput = (e: any) => {
-        {e.target.value.length > 8 ? null : setPickupTime(e.target.value)}
+        e.target.value.length <= TIME_MAX_LENGTH && setPickupTime(e.target.value)
     }
     const handleReturnTimeInput = (e: any) => {
-        {e.target.value.length > 8 ? null : setReturnTime(e.target.value)}
+        e.target.value.length <= TIME_MAX_LENGTH && setReturnTime(e.target.value)
     }
     
     return (
