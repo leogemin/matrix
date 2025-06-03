@@ -15,7 +15,7 @@ type StatusProps = {
 }
 
 const Status = ({
-  rentalDetailsState = true,
+  rentalDetailsState = false,
   rentalDetailsReturn,
   rentalDetailsPickup,
   vehicleState = false,

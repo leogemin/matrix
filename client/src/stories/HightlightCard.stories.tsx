@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import HighlightCard from "../components/HighlightCard";
-import icon from "../assets/sell.svg";
+import icon from "../assets/svg/sell.svg";
 
 const args: Meta<typeof HighlightCard> = {
     title: "Components/HighlightCard",
