@@ -2,10 +2,10 @@ import "../style/Hightlights.scss"
 import HighlightCard from "./HighlightCard"
 
 // icons
-import sell from "../assets/sell.svg"
-import mail from "../assets/mail.svg"
-import star from "../assets/star.svg"
-import tool from "../assets/tool.svg"
+import sell from "../assets/svg/sell.svg"
+import mail from "../assets/svg/mail.svg"
+import star from "../assets/svg/star.svg"
+import tool from "../assets/svg/tool.svg"
 
 const HighlightSection = () => {
     return (

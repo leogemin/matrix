@@ -1,5 +1,5 @@
 import "../style/header.scss"
-import Logo from "../assets/dentsulogo.png"
+import Logo from "../assets/img/dentsulogo.png"
 import Button from "./Button"
 
 const Header = () => {

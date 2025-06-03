@@ -1,6 +1,6 @@
 import '../style/Status.scss'
-import WarningIcon from "../assets/warning.svg"
-import ConfirmedIcon from "../assets/confirmed.svg"
+import WarningIcon from "../assets/svg/warning.svg"
+import ConfirmedIcon from "../assets/svg/confirmed.svg"
 
 type StatusProps = {
   rentalDetailsState: boolean,
