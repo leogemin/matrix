@@ -41,6 +41,12 @@
       color: #757575;
       font-weight: bold;
       gap: 2em;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+      }
     }
 
     &__more {
@@ -65,6 +71,7 @@
     &__content {
       display: flex;
       color: #1e1e1e;
+      justify-content: center;
 
       p {
         display: flex;
@@ -93,5 +100,12 @@
       display: flex;
       justify-content: center;
     }
+  }
+}
+
+@media (max-width: 850px) {
+  .vehicle_card {
+    flex-direction: column;
+    padding: 2em 1.5em;
   }
 }

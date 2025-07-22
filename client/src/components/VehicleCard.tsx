@@ -1,5 +1,8 @@
 import "../style/VehicleCard.scss"
 import CarImage from "../assets/car.png"
+import Send from "../assets/send.svg"
+import Bag from "../assets/bag.svg"
+import People from "../assets/people.svg"
 import Button from "./Button"
 
 const VehicleCard = () => {
@@ -14,9 +17,18 @@ const VehicleCard = () => {
           <h2>Chevy Malibu or Similar</h2>
         </p>
         <ul className="vehicle_card__details__list">
-          <li>Automatic</li>
-          <li>5 people</li>
-          <li>4 bags</li>
+          <li className="vehicle_card__details__list__item">
+            <img src={Send} alt="" />
+            <span>Automatic</span>
+          </li>
+          <li className="vehicle_card__details__list__item">
+            <img src={People} alt="" />
+            <span>5 people</span>
+          </li>
+          <li className="vehicle_card__details__list__item">
+            <img src={Bag} alt="" />
+            <span>4 bags</span>
+          </li>
         </ul>
         <a className="vehicle_card__details__more" href="#">Features & Price Details</a>
       </div>
