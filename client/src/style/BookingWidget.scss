@@ -20,6 +20,30 @@
         &__label {
             font-weight: normal;
             margin-bottom:.5em;
+            display: block;
+        }
+    }
+
+    &__footer {
+        &__mobile {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5em;
+
+            &__cell {
+                gap: .5em;
+                display: flex;
+                flex-direction: column;
+            }
+            &__btncell {
+                grid-column: span 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &__desktop {
+            display: none;
         }
     }
 }
@@ -33,5 +57,38 @@
     }
     .booking_widget {
         border-radius: .5em;
+
+        &__footer {
+            &__mobile {
+                display: none;
+            }
+            &__desktop {
+                display: flex;
+                gap: 1.5em;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                &__cell {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5em;
+
+                    &__title {
+                        font-size: .9rem;
+                    }
+
+                    &__input_wrapper {
+                        display: flex;
+                        gap: 1em;
+
+                        & > div {
+                            display: flex;
+                            gap: .5em;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
