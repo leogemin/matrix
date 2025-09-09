@@ -1,7 +1,7 @@
 import ContactDetails from "../components/ContactDetails";
 
 export default {
-    title: 'sections/ContactDetails',
+    title: 'components/ContactDetails',
     component: ContactDetails    
 }
 
