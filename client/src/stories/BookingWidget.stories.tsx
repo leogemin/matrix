@@ -1,7 +1,7 @@
 import BookingWidget from "../components/BookingWidget";
 
 export default {
-    title: 'sections/BookingWidget',
+    title: 'components/BookingWidget',
     component: BookingWidget    
 }
 
